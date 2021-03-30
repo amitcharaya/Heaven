@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "702115486767",
+    "project_id": "heavensaloon-efdf1",
+    "storage_bucket": "heavensaloon-efdf1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702115486767:android:144c29b5c8232e1134fada",
+        "android_client_info": {
+          "package_name": "com.example.heavensaloon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702115486767-jikpapc62a85k84cukocqqrr3d6nb7fb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnCAd2t5xhRLYKAfjlu2GgtMwhhynUNQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702115486767-jikpapc62a85k84cukocqqrr3d6nb7fb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
