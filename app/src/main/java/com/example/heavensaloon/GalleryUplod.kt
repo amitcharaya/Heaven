@@ -9,7 +9,11 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toFile
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 
 class GalleryUplod : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()
@@ -37,13 +41,25 @@ class GalleryUplod : AppCompatActivity() {
             val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
             startActivityForResult(gallery, pickImage)
 
+
         }
 
         fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
             super.onActivityResult(requestCode, resultCode, data)
             if (resultCode == RESULT_OK && requestCode == pickImage) {
-                imageUri = data?.data
 
+
+                    val imageUri:Uri = data?.data as Uri
+                    val storage = FirebaseStorage.getInstance()
+                    val storageRef: StorageReference = storage.getReference()
+                    val ref: StorageReference = storageRef.child("${imageUri.lastPathSegment}")
+                    ref.putFile(imageUri)
+                Log.d("CODE", "${resultCode}")
+
+
+            }else
+            {
+                print("eroor")
             }
         }
 
