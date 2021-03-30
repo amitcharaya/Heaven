@@ -13,7 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class GalleryUplod : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()
-    val button:Button = findViewById(R.id.button)
+
     private val pickImage = 100
     private var imageUri: Uri? = null
     val list: ArrayList<String> = ArrayList()
@@ -21,6 +21,7 @@ class GalleryUplod : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery_uplod)
         getData()
+        val button:Button= findViewById(R.id.button)
         val types = resources.getStringArray(R.array.types)
         val spinner: Spinner = findViewById(R.id.spinner)
         if (spinner != null) {
